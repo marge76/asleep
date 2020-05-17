@@ -1,0 +1,25 @@
+<?PHP
+
+require_once 'PJBS.php';
+#create an instance with something like 
+$drv = new PJBS();
+#connect to a JDBC data source with
+$drv->connect("jdbc:derby://localhost:6414/gaiandb", "gaiandb", "passw0rd");
+#execute a query
+$res = $drv->exec('select * from LT0');
+
+?>
+
+<html>
+<head>
+<title>PHP to GaianDB test</title>
+</head>
+<body>
+
+Line 1: 
+<?php print_r($drv->fetch_array($res));?>
+Line 2:
+<?php print_r($drv->fetch_array($res));?>
+
+</body>
+</html>
