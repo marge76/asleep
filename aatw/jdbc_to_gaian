@@ -1,0 +1,3 @@
+from com.ziclix.python.sql import zxJDBC
+db = zxJDBC.connect ( 'jdbc:derby://localhost:6414/gaiandb', 'gaiandb', 'passw0rd', 'org.apache.derby.jdbc.EmbeddedDriver')
+db.close ()

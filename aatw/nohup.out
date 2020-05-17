@@ -1,0 +1,42 @@
+ [*] Waiting for messages. To exit press CTRL+C
+ [x] Received 'insert into runlog VALUES ('1A0EE096-CF50-FD63-7B77-A76E8CE0786C', 'Bobby','2014-11-16',0)'
+Exception in thread "main" java.sql.SQLException: executeQuery method can not be used for update.
+	at org.apache.derby.client.am.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.Statement.executeQuery(Unknown Source)
+	at Recvtogdb.main(Recvtogdb.java:41)
+Caused by: org.apache.derby.client.am.SqlException: executeQuery method can not be used for update.
+	at org.apache.derby.client.am.Statement.checkForAppropriateSqlMode(Unknown Source)
+	at org.apache.derby.client.am.Statement.flowExecute(Unknown Source)
+	at org.apache.derby.client.am.Statement.executeQueryX(Unknown Source)
+	... 2 more
+ [*] Waiting for messages. To exit press CTRL+C
+ [x] Received 'insert into runlog VALUES ('1A0EE096-CF50-FD63-7B77-A76E8CE0786C', 'Harry','2014-11-18',0,0)'
+ [x] Received 'insert into runlog VALUES ('1A0EE096-CF50-FD63-7B77-A76E8CE0786C', 'Harry','2014-11-18',0,0)'
+ [x] Received 'update runlog SET TOPSPEED=0.0769 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=66.2876 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET TOPSPEED=0.119 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=132.5752 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET TOPSPEED=0.1414 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=198.8628 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=265.1504 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET TOPSPEED=0.1413 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=331.438 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=397.7256 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=464.0132 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET TOPSPEED=0.1444 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=530.3008 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'insert into runlog VALUES ('1A0EE096-CF50-FD63-7B77-A76E8CE0786C', 'Harry','2014-11-18',0,0)'
+ [x] Received 'update runlog SET TOPSPEED=0.0225 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=0.6629 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET TOPSPEED=0.144 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=1.3258 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=1.9886 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET TOPSPEED=0.142 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=2.6515 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=3.3144 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET TOPSPEED=0.1353 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=3.9773 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=4.6401 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET TOPSPEED=0.1389 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''
+ [x] Received 'update runlog SET DISTANCE=5.303 WHERE GUID='1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and PETNAME='Harry' and DAY='2014-11-18''

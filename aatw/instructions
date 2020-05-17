@@ -1,0 +1,18 @@
+export CP = .:commons-io-1.2.jar:commons-cli-1.1.jar:rabbitmq-client.jar
+java -cp $CP Recvtogdb
+java -cp ".:commons-io-1.2.jar:commons-cli-1.1.jar:rabbitmq-client.jar" Recvtogdb
+
+sudo python rab_send.py -u <username> -p <petname> -d <diameter> -s <start distance>
+
+Need to run from /home/pi/PJBS/build (so as to pick up ocnf file)
+ java -cp "/home/pi/PJBS:/home/pi/PJBS/dist/PJBS.jar" pjbs.Server
+
+
+
+To compile Recvtogdb.java
+javac -cp rabbitmq-client.jar Recvtogdb.java
+
+
+Old suggestion to run PJBS (no more)
+java -cp "/home/pi/PJBS/${file.reference.postgresql-jdbc3-8.1.jar}:/home/pi/PJBS/${file.reference.sljc.jar}:/home/pi/PJBS/${file.reference.lucene-core-2.1.0.jar}:/home/pi/PJBS/${file.reference.wrapper.jar}:/home/pi/PJBS/dist/PJBS.jar" pjbs.Server
+
