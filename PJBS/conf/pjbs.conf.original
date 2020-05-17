@@ -1,0 +1,4 @@
+localhost 4444
+org.postgresql.Driver
+com.ddtek.jdbc.sequelink.SequeLinkDriver
+org.apache.derby.jdbc.EmbeddedDriver
