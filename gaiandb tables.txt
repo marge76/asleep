@@ -1,0 +1,60 @@
+GAIAN
+
+CREATE TABLE MEMBERS
+(
+GUID VARCHAR(90),
+USERNAME VARCHAR(20),
+PETNAME VARCHAR(50),
+LOC_ID INTEGER,
+CITY CHAR(90),
+PETAGE INTEGER,
+PETSEX CHAR(1),
+PETTYPE VARCHAR(50),
+BREED VARCHAR(50)
+)
+
+CREATE TABLE LOC_REF
+(
+ID INTEGER,
+LOCATION CHAR(100)
+)
+
+select * from new com.ibm.db2j.GaianQuery('create table members(GUID VARCHAR(90),USERNAME VARCHAR(20),PETNAME VARCHAR(50),LOC_ID INTEGER,CITY CHAR(90),PETAGE INTEGER,PETSEX CHAR(1),PETTYPE VARCHAR(50),BREED VARCHAR(50))', 'with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('select * from members','with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('insert into members values(''1A0EE096-CF50-FD63-7B77-A76E8CE0786C'', ''margent'', ''Harry'', 1, ''London'', 12, ''M'', ''Hamster'', ''Syrian'')', 'with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('drop table members','with_provenance') GQ
+
+select * from new com.ibm.db2j.GaianQuery('create table loc_ref(id int, location char(100))', 'with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('select * from loc_ref','with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('insert into loc_ref values (1, ''United Kingdom'') (2, ''USA'') (3,''Canada'') (4,''Spain'')','with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('drop table loc_ref','with_provenance') GQ
+
+select * from new com.ibm.db2j.GaianQuery('create table runlog(GUID VARCHAR(90), PETNAME VARCHAR(50), DAY DATE, DISTANCE DOUBLE PRECISION, TOPSPEED DOUBLE PRECISION)', 'with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('select * from runlog','with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('insert into runlog values(''1A0EE096-CF50-FD63-7B77-A76E8CE0786C'', ''Harry'', ''2014-11-05'', 161.355, 2.344)', 'with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('insert into runlog values(''1A0EE096-CF50-FD63-7B77-A76E8CE0786C'', ''Harry'', ''2014-11-06'', 221.512, 2.112)', 'with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('insert into runlog values(''1A0EE096-CF50-FD63-7B77-A76E8CE0786C'', ''Harry'', ''2014-11-07'', 190.365, 1.974)', 'with_provenance') GQ
+select * from new com.ibm.db2j.GaianQuery('drop table runlog','with_provenance') GQ
+
+select * from new com.ibm.db2j.GaianQuery('create table winners(GUID VARCHAR(90), PETNAME VARCHAR(50), DAY DATE, DISTANCE DOUBLE PRECISION, TOPSPEED DOUBLE PRECISION)', 'with_provenance') GQ
+
+insert into runlog values('1A0EE027-CG50-FD63-7B87-A76E8GH0786C','Dave','2014-11-28',5.343,0.99)
+
+CREATE TABLE RUNLOG
+(
+DAY DATE,
+MEMBER CHAR(15),
+DISTANCE_M INTEGER
+)
+
+INSERT INTO RUNLOG (DAY, MEMBER, DISTANCE_M) VALUES ('24/10/2014','argentm', 2)
+
+MYSQL - LAT/LONG
+
+only insert zero hour run if no data for the day already
+select '2014-11-01' as DAY, 'Harry' as PETNAME, '1A0EE096-CF50-FD63-7B77-A76E8CE0786C' as GUID, '221.512' as DISTANCE, '2.112' as TOPSPEED from runlog where DAY = '2014-11-01' and PETNAME = 'Harry' and GUID = '1A0EE096-CF50-FD63-7B77-A76E8CE0786C' and DISTANCE > 0 AND TOPSPEED > 0 HAVING count(*) = 0
+
+or write php that exits with current hour distance ?
+
+
+

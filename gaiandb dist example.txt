@@ -1,0 +1,9 @@
+
+insert into members values('3A0EE096-5F50-FJ63-7B77-G76E8NE0723A', 'JohnS', 'Tyler', 1, 'Edinburgh', 6, 'M', 'Hamster', 'Russian')
+insert into runlog values('3A0EE096-5F50-FJ63-7B77-G76E8NE0723A', 'Tyler', '2014-12-02', 1161.355, 1.97)
+
+
+
+
+
+

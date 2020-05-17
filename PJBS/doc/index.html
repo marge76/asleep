@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Linux)">
+	<META NAME="AUTHOR" CONTENT="lenny">
+	<META NAME="CREATED" CONTENT="20070222;21512200">
+	<META NAME="CHANGEDBY" CONTENT="lenny">
+	<META NAME="CHANGED" CONTENT="20070224;15024300">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		H1 { margin-bottom: 0.21cm }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "DejaVu Sans"; font-size: 16pt }
+		H1.ctl { font-family: "DejaVu Sans"; font-size: 16pt }
+		H2 { margin-bottom: 0.21cm }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-size: 14pt; font-style: italic }
+		H2.ctl { font-size: 14pt; font-style: italic }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="it-IT" DIR="LTR">
+<H1 CLASS="western">PJBS</H1>
+<H2 CLASS="western">PHP – JAVA Bridge System</H2>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><IMG SRC="index_html_60a4ea67.gif" NAME="Oggetto1" WIDTH=428 HEIGHT=182></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm">Setting up the JAVA server:</P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0cm">Locate the file “Main.java”
+	and open it with a text editor</P>
+	<LI><P STYLE="margin-bottom: 0cm">Search for a line starting with
+	“Class.forName”</P>
+	<LI><P STYLE="margin-bottom: 0cm">Add more “Class.forName” lines
+	or adjust the existing ones as to load all the JDBC drivers you're
+	going to use with this bridge</P>
+	<LI><P STYLE="margin-bottom: 0cm">Copy all needed drivers into the
+	“ext” folder inside your JRE installation path</P>
+	<LI><P STYLE="margin-bottom: 0cm">Compile and launch the “pjbs.Main”
+	class</P>
+</OL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm">I understand that having to edit some
+sources, copy some files around and recompiling things is not exactly
+user-friendly, but some experience in how to deal with JDBC drivers
+is necessary anyway because you're probably going to use this bridge
+toghether with closed source, poorly implemented drivers that may
+also require some other tweakings to work properly.</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm">Using the PHP client class:</P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Courier New, monospace">require_once
+	'PJBS.php';</FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm">create an instance with something
+	like <BR><FONT FACE="Courier New, monospace">$drv = new PJBS();</FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm">connect to a JDBC data source
+	with<BR><FONT FACE="Courier New, monospace">$drv-&gt;connect([your
+	jdbc url], [your username], [your password]);</FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm">execute a query<BR><FONT FACE="Courier New, monospace">$res
+	= $drv-&gt;exec('select * from [your table]');</FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm">print the first
+	result<BR><FONT FACE="Courier New, monospace">print_r($drv-&gt;fetch_array($res));</FONT></P>
+</OL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+</BODY>
+</HTML>
