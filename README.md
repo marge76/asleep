@@ -9,5 +9,5 @@ World Rodent Racing - RaspberryPi
 
 [Application Design](https://github.com/marge76/asleep/blob/master/ApplicationDesign.pdf)
 
-[Video 1 - In action](https://github.com/marge76/asleep/blob/master/IMG_0207.mp4)
+[Video - In action](https://github.com/marge76/asleep/blob/master/IMG_0207.mp4)
 
