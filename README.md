@@ -1,5 +1,8 @@
 # Asleep at the Wheel
-World Rodent Racing - RaspberryPi
+World Rodent Racing 
+
+Measure the distance your rodent runs on its wheel using your RaspberryPi
+See how far they've travelled and compare to your friends.
 
 [Introductory Video](https://github.com/marge76/asleep/blob/master/asleepatthewheel.mp4)
 
